@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>网络主页</title>
+  <style>
+    body {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+    
+    .search-container {
+      text-align: center;
+    }
+    
+    .search-box {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 300px;
+      font-size: 16px;
+    }
+    
+    .submit-button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4caf50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function baidu() {
+      var baidu = document.getElementById("baidu").value;
+      var url = "http://www.baidu.com/s?wd=" + encodeURIComponent(baidu);
+      window.location.href = url;
+    }
+
+    function zhihu() {
+      var zhihu = document.getElementById("zhihu").value;
+      var url = "https://www.zhihu.com/search?type=content&q=" + encodeURIComponent(zhihu);
+      window.location.href = url;
+    }
+
+    function bilibili() {
+      var bilibili = document.getElementById("bilibili").value;
+      var url = "https://search.bilibili.com/all?keyword=" + encodeURIComponent(bilibili);
+      window.location.href = url;
+    }
+
+    function google() {
+      var google = document.getElementById("google").value;
+      var url = "https://www.google.com/search?q=" + encodeURIComponent(google);
+      window.location.href = url;
+    }
+
+    function googleScholar() {
+      var googleScholar = document.getElementById("googleScholar").value;
+      var url = "https://scholar.google.com/scholar?as_q=" + encodeURIComponent(googleScholar);
+      window.location.href = url;
+    }
+  </script>
+</head>
+<body>
+  <h1>网络主页</h1>
+  <p>
+    <input type="text" id="baidu" placeholder="请输入查询内容" class="search-box" />
+    <button onclick="baidu()" class="submit-button">百度</button>
+  </p>
+  <p>    
+    <input type="text" id="zhihu" placeholder="请输入查询内容" class="search-box" />
+    <button onclick="zhihu()" class="submit-button">知乎</button>
+  </p>
+  <p>    
+    <input type="text" id="bilibili" placeholder="请输入查询内容" class="search-box" />
+    <button onclick="bilibili()" class="submit-button">哔哩</button>
+  </p>
+  <p>
+    <input type="text" id="google" placeholder="请输入查询内容" class="search-box" />
+    <button onclick="google()" class="submit-button">谷歌</button>
+  </p>
+  <p>    
+    <input type="text" id="googleScholar" placeholder="请输入查询内容" class="search-box" />
+    <button onclick="googleScholar()" class="submit-button">学术</button>
+  </p>
+</body>
+</html>
