@@ -64,6 +64,12 @@
       var url = "https://scholar.google.com/scholar?as_q=" + encodeURIComponent(googleScholar);
       window.location.href = url;
     }
+
+    function youdao() {
+      var youdao = document.getElementById("youdao").value;
+      var url = "https://youdao.com/result?lang=en&word=" + encodeURIComponent(youdao);
+      window.location.href = url;
+    }
   </script>
 </head>
 <body>
@@ -84,9 +90,13 @@
     <input type="text" id="google" placeholder="请输入查询内容" class="search-box" />
     <button onclick="google()" class="submit-button">谷歌</button>
   </p>
-  <p>    
+  <p>
     <input type="text" id="googleScholar" placeholder="请输入查询内容" class="search-box" />
     <button onclick="googleScholar()" class="submit-button">学术</button>
+  </p>
+  <p>    
+    <input type="text" id="youdao" placeholder="请输入查询内容" class="search-box" />
+    <button onclick="youdao()" class="submit-button">有道</button>
   </p>
 </body>
 </html>
